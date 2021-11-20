@@ -3,15 +3,13 @@ import { useRouter } from "next/router";
 const News = ({ news }) => {
   return (
     <div className="container">
-      <h1>{news.attributes.title}</h1>
+      <h1>{news.title}</h1>
       <div>
         <span className="small-text text-muted">
-          Posted on: {news.attributes.created}
+          Posted on: {news.created_on}
         </span>
       </div>
-      <div
-        dangerouslySetInnerHTML={{ __html: news.attributes.body.processed }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: news.content }}></div>
     </div>
   );
 };

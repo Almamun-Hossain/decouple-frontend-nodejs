@@ -6,10 +6,10 @@ const NewsCard = ({ news }) => {
         <a className="nav-link">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title">{news.attributes.title}</h5>
+              <h5 className="card-title">{news.title}</h5>
               <p className="card-text">
                 <small className="text-muted">
-                  Posted on: {news.attributes.created}
+                  Posted on: {news.created_on}
                 </small>
               </p>
             </div>
